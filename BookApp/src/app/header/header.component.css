@@ -1,4 +1,5 @@
 #mainContent {
+    overflow: hidden;
     float:right;
     color: white;
     padding-top: 10px;
@@ -11,4 +12,51 @@
     border: solid 1px white;
     border-radius: 5px;
     margin-right: 10px;
+}
+
+.fadeIn {
+    animation: 1s fadeInRight forwards;
+}
+
+.fadeOut{
+    animation: 1s fadeOutRight forwards;
+}
+
+#loginWrapper {
+    opacity: 0;
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(300px)}
+    100% {opacity: 1; transform: translateX(0)}
+}
+
+@keyframes fadeOutRight {
+    0% { opacity: 1; transform: translateX(0)}
+    100% {opacity: 0; transform: translateX(300px)}
+}
+
+  
+
+#firstLoginElement {
+    margin-top: 4%;
+}
+
+.login {
+    margin-top: 1%;
+}
+
+.loginInput {
+    border: solid 1px white;
+    border-radius: 50px;
+    background: transparent;
+    height: 100%;
+    margin-left: 5px;
+    width: 90%;
+    color: white;
+    padding-left: 10px;
+}
+
+.loginInput:focus {
+    outline: 0;
 }

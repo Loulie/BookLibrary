@@ -12,4 +12,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  showLogin() {
+    const element = document.getElementById('loginWrapper');
+
+    console.log(element.classList.value);
+    if (element.classList.value === '' || element.classList.value === 'fadeOut') {
+      element.className = 'fadeIn';
+    } else {
+      element.className = 'fadeOut';
+    }
+  }
 }
