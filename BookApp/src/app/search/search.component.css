@@ -3,7 +3,6 @@
 }
 
 #title {
-    width: 40%;
     font-family: "Script MT";
     font-size: 50px;
     text-align: center;
@@ -15,9 +14,9 @@
 
 #searchInput {
     border: solid 1px white;
+    width: 100%;
     border-radius: 50px;
     background: transparent;
-    width: 40%;
     color:white;
     padding-left: 10px;
     font-family: "Script MT";
@@ -29,7 +28,6 @@
 }
 
 #searchButtons {
-    width: 40%;
     margin: auto;
     text-align: center;
     margin-top: 2.5%;
@@ -37,8 +35,19 @@
 }
 
 .buttons {
+    width: 100%;
     color:white;
     border: solid 1px white;
     background: transparent;
     font-size: 20px;
+}
+
+#secondButtonMarginForMobile {
+
+}
+
+@media (max-width: 978px) {
+    #secondButtonMarginForMobile {
+        margin-top:5px;
+    }
 }
