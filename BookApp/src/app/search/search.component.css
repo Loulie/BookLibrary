@@ -48,10 +48,6 @@
 
 }
 
-#secondButtonMarginForMobile {
-
-}
-
 @media (max-width: 978px) {
     #secondButtonMarginForMobile {
         margin-top:5px;
