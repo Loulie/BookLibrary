@@ -1,5 +1,5 @@
 <div id="mainContent">
-  <div class="row">
+  <div class="row mx-auto">
     <div class="col">
         <button type="button" class="btn btn-primary buttons" (click)="showLogin()" >Login <i class="fas fa-sign-in-alt"></i></button>
         <button type="button" class="btn btn-primary buttons">Register</button>
@@ -12,7 +12,7 @@
           <div class="col" style="padding: 0;">
             <span>
                 <i class="fas fa-user"></i>
-                <input class="loginInput" type="text" spellcheck="false"/>
+                <input class="loginInput" type="text" placeholder="Username" spellcheck="false"/>
             </span>
           </div>
         </div>
@@ -21,8 +21,15 @@
           <div class="col" style="padding: 0;">
             <span>
                 <i class="fas fa-lock"></i>
-                <input class="loginInput" type="password" spellcheck="false"/>
+                <input class="loginInput" type="password" placeholder="Password" spellcheck="false"/>
             </span>
+          </div>
+        </div>
+
+        <div class="row" class="login">
+          <div class="col mx-auto">
+            <button type="button" class="btn btn-primary buttons ml-2 mt-1" >Anmelden</button>
+            <button type="button" class="btn btn-primary buttons mt-1 mr-0" style="float: right" >Login as guest</button>
           </div>
         </div>
   </div>

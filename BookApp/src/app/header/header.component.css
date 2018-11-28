@@ -14,6 +14,11 @@
     margin-right: 10px;
 }
 
+.buttons:hover {
+    background: white;
+    color: #201A23;
+}
+
 .fadeIn {
     animation: 1s fadeInRight forwards;
 }
@@ -38,11 +43,11 @@
 
 @keyframes slideUp {
     0% { opacity: 1; }
-    100% { opacity: 1; height: 5%; }
+    100% { opacity: 1; height: 4%; }
 }
 
 @keyframes slideDown {
-    0% { opacity: 1; height: 5%;}
+    0% { opacity: 1; height: 4%;}
     100% { opacity: 1; height: 0; }
 }
 

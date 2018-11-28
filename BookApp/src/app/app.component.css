@@ -6,7 +6,7 @@
 }
 
 #searchComponent {
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 #footer {
@@ -14,17 +14,17 @@
     opacity: 0;
     position: absolute;
     bottom: 0;
-    height: 1px;
+    height: 0;
 }
 
 .slideFooterUp {
     opacity: 1;
     background: #201A23;
-    animation: 2s slideUp forwards;
+    animation: 1s slideUp forwards;
 }
 
 .slideFooterDown {
     opacity: 1;
     background: #201A23;
-    animation: 2s slideDown forwards;
+    animation: 1s slideDown forwards;
 }

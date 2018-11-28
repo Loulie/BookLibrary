@@ -42,6 +42,12 @@
     font-size: 20px;
 }
 
+.buttons:hover {
+    background: white;
+    color: #201A23;
+
+}
+
 #secondButtonMarginForMobile {
 
 }
