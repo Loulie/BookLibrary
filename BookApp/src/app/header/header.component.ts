@@ -23,4 +23,16 @@ export class HeaderComponent implements OnInit {
       element.className = 'fadeOut';
     }
   }
+
+  showFooter() {
+    const footer = document.getElementById('footer');
+
+    if ( footer.classList.contains('slideFooterUp')) {
+      footer.classList.remove('slideFooterUp');
+      footer.classList.add('slideFooterDown');
+    } else {
+      footer.classList.remove('slideFooterDown');
+      footer.classList.add('slideFooterUp');
+    }
+  }
 }

@@ -36,7 +36,15 @@
     100% {opacity: 0; transform: translateX(300px)}
 }
 
-  
+@keyframes slideUp {
+    0% { opacity: 1; }
+    100% { opacity: 1; height: 5%; }
+}
+
+@keyframes slideDown {
+    0% { opacity: 1; height: 5%;}
+    100% { opacity: 1; height: 0; }
+}
 
 #firstLoginElement {
     margin-top: 4%;
