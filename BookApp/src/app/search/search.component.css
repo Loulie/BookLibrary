@@ -56,4 +56,8 @@
     #secondButtonMarginForMobile {
         margin-top:5px;
     }
+
+    .title {
+        width: 100%;
+    }
 }
