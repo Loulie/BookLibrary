@@ -1,8 +1,13 @@
 #references {
     color:white;
-    font-family: "Script MT";
+    font-family: "Roboto";
 }
 
 p {
     display: inline;
+}
+
+p:hover {
+    cursor: pointer;
+    color: #1DA1F2;
 }

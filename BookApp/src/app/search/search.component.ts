@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  public userInput;
+  public selectedBook = null;
+
+  constructor(private httpService: HttpService, public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+
+    this.sharedDataService.selectedBook$.subscribe( item => {
+      this.selectedBook = item;
+    });
+
   }
 
+
+  queryBook() {
+    this.httpService.queryBook(this.userInput);
+  }
 }

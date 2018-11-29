@@ -2,7 +2,7 @@
   <app-header></app-header>
 
 
-  <div class="container" id="searchComponent">
+  <div *ngIf="selectedBook === null" class="container" id="searchComponent">
     <app-search></app-search>
   </div>
 
