@@ -1,0 +1,11 @@
+.title {
+    font-family: "Audiowide";
+}
+
+p, span {
+    display: inline;
+}
+
+p {
+    cursor: pointer;
+}

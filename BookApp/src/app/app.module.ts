@@ -17,6 +17,10 @@ import { HttpService } from './http.service';
 import { FormsModule } from '@angular/forms';
 import { BookInfoComponent } from './book-info/book-info.component';
 import { InfoHeaderComponent } from './info-header/info-header.component';
+import { NavComponent } from './nav/nav.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { BookDescriptionComponent } from './book-description/book-description.component';
+import { BookReviewComponent } from './book-review/book-review.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { InfoHeaderComponent } from './info-header/info-header.component';
     FooterComponent,
     SearchComponent,
     BookInfoComponent,
-    InfoHeaderComponent
+    InfoHeaderComponent,
+    NavComponent,
+    BookDetailsComponent,
+    BookDescriptionComponent,
+    BookReviewComponent
   ],
   imports: [
     BrowserModule,
