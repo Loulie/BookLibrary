@@ -9,17 +9,18 @@ import { SharedDataService } from '../shared-data.service';
 export class BookDetailsComponent implements OnInit {
 
   public selectedBook;
-  public image;
+  public image = null;
 
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
     this.sharedDataService.selectedBook$.subscribe( item => {
-      console.log(item[0]);
-      console.log(item[0].volumeInfo.imageLinks.thumbnail);
-      this.selectedBook = item;
-      this.image = item[0].volumeInfo.imageLinks.thumbnail;
-     // document.getElementById('thumbnail').src = this.image;
+      console.log(item);
+      if (item !== [] && item !== null) {
+        console.log(item);
+        this.selectedBook = item;
+        this.image = item[0].volumeInfo.imageLinks.thumbnail;
+      }
     });
   }
 

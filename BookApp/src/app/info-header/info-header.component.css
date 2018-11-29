@@ -26,3 +26,10 @@ p:after {
 p:hover:after {
     width: 100%;
 }
+
+@media (max-width: 978px) {
+    .title {
+        font-size: 25;
+        text-align: left;
+    }
+}

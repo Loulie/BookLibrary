@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SharedDataService } from './shared-data.service';
+import { TestingCompilerFactoryImpl } from '@angular/platform-browser-dynamic/testing/src/compiler_factory';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,9 @@ export class HttpService {
 
         return tmpItem === newTitle;
       });
-
-      this.sharedDataService.selectedBook = tmp;
+      if (tmp.length !== 0) {
+        this.sharedDataService.selectedBook = tmp;
+      }
     });
   }
 }
