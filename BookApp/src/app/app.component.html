@@ -1,9 +1,13 @@
 <div id="mainContent" class="container-fluid">
-  <app-header></app-header>
+  <app-header *ngIf="selectedBook === null"></app-header>
 
 
   <div *ngIf="selectedBook === null" class="container" id="searchComponent">
     <app-search></app-search>
+  </div>
+
+  <div *ngIf="selectedBook !== null" class="test" style="overflow-y: auto; overflow-x: hidden;"> 
+    <app-book-info></app-book-info>
   </div>
 
   <div class="container-fluid" id="footer">

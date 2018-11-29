@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public selectedBook = null;
+
+  constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+
+    this.sharedDataService.selectedBook$.subscribe( item => {
+      this.selectedBook = item;
+    });
   }
 
 

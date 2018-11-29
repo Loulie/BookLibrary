@@ -15,13 +15,17 @@ import { SharedDataService } from './shared-data.service';
 import { HttpService } from './http.service';
 
 import { FormsModule } from '@angular/forms';
+import { BookInfoComponent } from './book-info/book-info.component';
+import { InfoHeaderComponent } from './info-header/info-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    BookInfoComponent,
+    InfoHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -28,3 +28,7 @@
     background: #201A23;
     animation: 1s slideDown forwards;
 }
+
+.test {
+    height: 100%;
+}
