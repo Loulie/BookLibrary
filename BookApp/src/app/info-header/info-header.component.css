@@ -7,6 +7,22 @@ p, span {
 }
 
 p {
+    position: relative;
     cursor: pointer;
     font-family: "Roboto";
+    text-decoration: none;
+}
+
+p:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid black;
+    transition: 0.4s;
+}
+
+p:hover:after {
+    width: 100%;
 }
