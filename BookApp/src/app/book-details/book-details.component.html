@@ -1,14 +1,45 @@
 <div class="h-100">
-    <div class="row mx-auto h-50 w-75">
-        <div class="col-2 my-auto">
-            <img src="{{this.image}}" alt="" id="thumbnail" />
+    <div class="row mx-auto h-50 w-75 mt-5">
+        <div class="col-12 col-xl-4 my-auto">
+            <img src="{{this.image}}" alt="" width="50%" height="50%" id="thumbnail" />
         </div>
-        <div class="col-6 my-auto">
+        <div class="col-12 col-xl-8 my-auto">
           <div class="row">
-            <div>
-              
+            <div class="col">
+              <h2 class="mb-0">
+                <span class="title" >{{selectedBook.title}}:</span>
+              </h2>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col">
+              <h4>
+                  <span class="subTitle" >{{selectedBook.subTitle}}</span>
+              </h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col my-auto">
+              <h5 class="subSubTitle">
+                <span class="mr-1">
+                  {{selectedBook.authors[0]}}
+                </span>
+
+                <span class="ml-1">
+                  {{selectedBook.publisher}}
+                </span>
+              </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <button type="button" class="w-100 btn btn-primary buttons">Buy the book <i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+
         </div>
       </div>
 </div>

@@ -1,3 +1,51 @@
 img {
     box-shadow: 1px 1px 1px #777;
 } 
+
+.title {
+    font-family: "Audiowide";
+    font-size: 40px;
+}
+
+.subTitle {
+    font-family: "Audiowide";
+    font-size: 20px;
+}
+
+.subSubTitle {
+    font-family: "Audiowide";
+    font-size: 15px;
+}
+
+.mt-5 {
+    margin-top: 10% !important;
+}
+
+.buttons {
+    font-family: "Roboto";
+    height: auto;
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background: #1DA1F2;
+    color:white;
+    border: 1px solid white;
+}
+
+@media (max-width: 987px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .subTitle {
+        font-size: 15px;
+    }
+
+    .subSubTitle {
+        font-size: 10px;
+    }
+}

@@ -8,3 +8,8 @@
 html, body {
     height: 100%;
 }
+
+.btn:focus, .btn:active:focus, .btn.active:focus{
+    outline:none;
+    box-shadow:none;
+}

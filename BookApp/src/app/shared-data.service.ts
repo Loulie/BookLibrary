@@ -14,12 +14,13 @@ export class SharedDataService {
 
   set selectedBook(book: Object) {
     const newBook = this.createBook(book);
+    console.log(newBook);
     this._selectedBook.next(newBook);
   }
 
   public createBook(book: Object) {
     const tmp = book[0];
-    return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subTitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
+    return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subtitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
        tmp.volumeInfo.publishedDate, tmp.volumeInfo.description, tmp.volumeInfo.averageRating,
         tmp.volumeInfo.imageLinks.thumbnail, tmp.saleInfo.retailPrice.amount);
   }
