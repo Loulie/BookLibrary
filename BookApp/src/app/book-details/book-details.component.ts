@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedDataService } from '../shared-data.service';
+import { Book } from '../Book';
 
 @Component({
   selector: 'app-book-details',
@@ -8,18 +9,16 @@ import { SharedDataService } from '../shared-data.service';
 })
 export class BookDetailsComponent implements OnInit {
 
-  public selectedBook;
+  public selectedBook: Book;
   public image = null;
 
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
     this.sharedDataService.selectedBook$.subscribe( item => {
-      console.log(item);
-      if (item !== [] && item !== null) {
-        console.log(item);
+      if (item !== null) {
         this.selectedBook = item;
-        this.image = item[0].volumeInfo.imageLinks.thumbnail;
+        this.image = item.image;
       }
     });
   }
