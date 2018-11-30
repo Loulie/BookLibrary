@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from '../shared-data.service';
+import { Book } from '../Book';
 
 @Component({
   selector: 'app-book-description',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDescriptionComponent implements OnInit {
 
-  constructor() { }
+  public selectedBook: Book;
+
+  constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+    this.sharedDataService.selectedBook$.subscribe( item => {
+      this.selectedBook = item;
+    });
   }
 
 }
