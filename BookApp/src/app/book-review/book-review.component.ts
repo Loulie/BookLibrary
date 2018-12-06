@@ -12,4 +12,12 @@ export class BookReviewComponent implements OnInit {
   ngOnInit() {
   }
 
+  smallWindow() {
+    if (window.outerWidth < 987) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }

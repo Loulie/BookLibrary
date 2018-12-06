@@ -10,13 +10,23 @@ import { Book } from '../Book';
 export class BookDescriptionComponent implements OnInit {
 
   public selectedBook: Book;
+  public smallDescription;
 
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
     this.sharedDataService.selectedBook$.subscribe( item => {
       this.selectedBook = item;
+      this.smallDescription = this.selectedBook.description.substr(0, 250) + ' ...';
     });
+  }
+
+  smallWindow() {
+    if (window.outerWidth < 987) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

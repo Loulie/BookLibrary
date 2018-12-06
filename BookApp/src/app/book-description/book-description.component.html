@@ -4,9 +4,12 @@
     </div>
 </div>
 <div class="row h-75 pb-3">
-    <div class="col-12 col-xl-10 pr-1 pl-1 mx-auto" style="text-align: justify;">
-        <span class="descriptionText">
+    <div class="col-12 col-xl-10 test mx-auto" style="text-align: justify;">
+        <span *ngIf="!smallWindow()" class="descriptionText">
             {{selectedBook.description}}
+        </span>
+        <span *ngIf="smallWindow()" class="descriptionText">
+            {{smallDescription}}
         </span>
     </div>
 </div>

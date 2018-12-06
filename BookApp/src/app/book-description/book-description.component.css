@@ -6,3 +6,15 @@
 .descriptionText {
     font-family: "Roboto";
 }
+
+.test {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width: 987px) {
+    .test {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
