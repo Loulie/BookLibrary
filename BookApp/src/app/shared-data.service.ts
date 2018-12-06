@@ -14,7 +14,6 @@ export class SharedDataService {
 
   set selectedBook(book: Object) {
     const newBook = this.createBook(book);
-    console.log(newBook);
     this._selectedBook.next(newBook);
   }
 

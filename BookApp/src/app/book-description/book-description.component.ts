@@ -21,12 +21,11 @@ export class BookDescriptionComponent implements OnInit {
     });
   }
 
-  smallWindow() {
+  public smallWindow(): boolean {
     if (window.outerWidth < 987) {
       return true;
     } else {
       return false;
     }
   }
-
 }
