@@ -5,8 +5,3 @@
 p {
     cursor:pointer;
 }
-
-p:hover {
-    border: solid 1px black;
-    border-radius: 5px;
-}
