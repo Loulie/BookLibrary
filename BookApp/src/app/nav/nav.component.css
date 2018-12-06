@@ -8,3 +8,9 @@ p {
     border: solid 1px white;
     border-radius: 5px;
 }
+
+@media (max-width: 987px) {
+    .itemText {
+        display: none;
+    }
+}
