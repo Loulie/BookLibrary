@@ -1,0 +1,16 @@
+.border-right {
+    padding: 0;
+    border-right: 1px solid rgba(31, 53, 78, .11);
+}
+
+.user {
+    font-size: 50px;
+}
+
+.star-color {
+    color: #f2b01e;
+}
+
+.rev-text {
+    font-family: "Roboto"
+}
