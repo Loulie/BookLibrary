@@ -16,8 +16,10 @@ export class BookDescriptionComponent implements OnInit {
 
   ngOnInit() {
     this.sharedDataService.selectedBook$.subscribe( item => {
-      this.selectedBook = item;
-      this.smallDescription = this.selectedBook.description.substr(0, 250) + ' ...';
+      if (item !== null) {
+        this.selectedBook = item;
+        this.smallDescription = this.selectedBook.description.substr(0, 250) + ' ...';
+      }
     });
   }
 

@@ -17,6 +17,10 @@ export class SharedDataService {
     this._selectedBook.next(newBook);
   }
 
+  public resetBook() {
+    this._selectedBook.next(null);
+  }
+
   public createBook(book: Object) {
     const tmp = book[0];
     return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subtitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
