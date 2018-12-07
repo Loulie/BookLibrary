@@ -36,7 +36,7 @@
 
           <div class="row mt-2">
             <div class="col">
-              <button type="button" class="w-100 btn btn-primary buttons">Buy the book <i class="fas fa-shopping-cart"></i></button>
+              <button type="button" [disabled]="selectedBook.buyLink === undefined" (click)="redirectToBuyPage()" class="w-100 btn btn-primary buttons">Buy the book <i class="fas fa-shopping-cart"></i></button>
             </div>
           </div>
 

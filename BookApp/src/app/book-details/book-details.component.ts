@@ -19,7 +19,12 @@ export class BookDetailsComponent implements OnInit {
       if (item !== null) {
         this.selectedBook = item;
         this.image = item.image;
+        console.log(this.selectedBook.buyLink);
       }
     });
+  }
+
+  public redirectToBuyPage(): void {
+    window.open(this.selectedBook.buyLink);
   }
 }

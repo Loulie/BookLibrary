@@ -8,9 +8,10 @@ export class Book {
     public description: string;
     public averageRating: number;
     public image: string;
+    public buyLink: string = null;
 
     constructor(title: string, subTitle: string, authors: string[], publisher: string, publishedDate: string,
-         description: string, averageRating: number, image: string) {
+         description: string, averageRating: number, image: string, buyLink?: string) {
              this.title = title;
              this.subTitle = subTitle;
              this.authors = authors;
@@ -19,5 +20,6 @@ export class Book {
              this.description = description;
              this.averageRating = averageRating;
              this.image = image;
+             this.buyLink = buyLink;
          }
 }
