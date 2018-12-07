@@ -26,4 +26,8 @@ export class SearchComponent implements OnInit {
   queryBook() {
     this.httpService.queryBook(this.userInput);
   }
+
+  queryRandom() {
+    this.httpService.queryBook('12 rules for life');
+  }
 }

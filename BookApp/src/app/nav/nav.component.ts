@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+  }
+
+  public home(): void {
+    this.sharedDataService.resetBook();
   }
 
 }
