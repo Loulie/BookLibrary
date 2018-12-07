@@ -21,8 +21,11 @@ export class SharedDataService {
     this._selectedBook.next(null);
   }
 
-  public createBook(book: Object) {
-    const tmp = book[0];
+  public createBook(book) {
+    let tmp = book;
+    if (book.length !== undefined) {
+       tmp = book[0];
+    }
     return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subtitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
        tmp.volumeInfo.publishedDate, tmp.volumeInfo.description, tmp.volumeInfo.averageRating,
         tmp.volumeInfo.imageLinks.thumbnail);
