@@ -17,7 +17,9 @@ img {
     font-size: 15px;
 }
 
-
+.marginBottom {
+    margin-bottom: 10%;
+}
 
 .buttons {
     font-family: "Roboto";
