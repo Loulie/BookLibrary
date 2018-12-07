@@ -16,6 +16,11 @@ export class BookDescriptionComponent implements OnInit {
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+
+    if (window.innerWidth < 987) {
+      this.mobile = true;
+    }
+
     this.sharedDataService.selectedBook$.subscribe( item => {
       if (item !== null) {
         this.selectedBook = item;
@@ -26,7 +31,6 @@ export class BookDescriptionComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    console.log(event.target.innerWidth);
     if (event.target.innerWidth < 987) {
       this.mobile = true;
     } else {
