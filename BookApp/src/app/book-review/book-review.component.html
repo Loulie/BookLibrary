@@ -1,6 +1,6 @@
 <div *ngFor="let item of reviews; first as isFirst; last as isLast">
     <div class="row" [ngClass]="{'border-bottom': !isLast, 'pt-3': !isFirst, 'pb-3': !isLast}" >
-        <div class="col-2 text-center border-right pt-3">
+        <div class="col-3 text-center border-right pt-3">
             <i class="far fa-user-circle user"></i><br />
             <i class="fas fa-star star-color"></i>
             <i class="fas fa-star star-color"></i>
@@ -12,7 +12,7 @@
                 {{item.author}}
             </p>
         </div>
-        <div class="col-10 my-auto" [ngClass]="{'pt-3': !isFirst}" >
+        <div class="col-9 my-auto" [ngClass]="{'pt-3': !isFirst}" >
             <div class="row">
                 <div class="col-10 mx-auto text-justify rev-text">
                     <span *ngIf="!smallWindow()">
