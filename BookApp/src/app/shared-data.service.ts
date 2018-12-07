@@ -25,6 +25,6 @@ export class SharedDataService {
     const tmp = book[0];
     return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subtitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
        tmp.volumeInfo.publishedDate, tmp.volumeInfo.description, tmp.volumeInfo.averageRating,
-        tmp.volumeInfo.imageLinks.thumbnail, tmp.saleInfo.retailPrice.amount);
+        tmp.volumeInfo.imageLinks.thumbnail);
   }
 }

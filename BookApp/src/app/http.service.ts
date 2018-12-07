@@ -15,6 +15,7 @@ export class HttpService {
     this.http.get<{kind: string, totalItems: Int32Array, items: Array<{volumeInfo: {title: string}}>}>('https://www.googleapis.com/books/v1/volumes?q=' + title).subscribe( data => {
 
     let tmp = [...data.items];
+    const firstBook = tmp[0];
 
       tmp = tmp.filter( item => {
 
@@ -23,8 +24,11 @@ export class HttpService {
 
         return tmpItem === newTitle;
       });
+
       if (tmp.length !== 0) {
         this.sharedDataService.selectedBook = tmp;
+      } else {
+        this.sharedDataService.selectedBook = firstBook;
       }
     });
   }
