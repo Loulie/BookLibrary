@@ -9,6 +9,26 @@ p {
     border-radius: 5px;
 }
 
+#home, #info, #desc, #rev {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#home:after, #info:after, #desc:after, #rev:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 30%;
+    width: 0%;
+    border-bottom: 2px solid black;
+    transition: 0.4s;
+}
+
+#home:hover:after, #info:hover:after, #desc:hover:after, #rev:hover:after {
+    width: 45%;
+}
+
 @media (max-width: 987px) {
     .itemText {
         display: none;
