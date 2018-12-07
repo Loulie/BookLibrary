@@ -8,8 +8,21 @@ import { SharedDataService } from '../shared-data.service';
 })
 export class InfoHeaderComponent implements OnInit {
 
+  private login = false;
+
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
+  }
+
+  public toggleLogin() {
+    if (this.login === false) {
+      document.getElementById('login').classList.remove('fadeOut');
+      document.getElementById('login').classList.add('fadeIn');
+    } else {
+      document.getElementById('login').classList.remove('fadeIn');
+      document.getElementById('login').classList.add('fadeOut');
+    }
+    this.login = !this.login;
   }
 }
