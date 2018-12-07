@@ -12,10 +12,4 @@ export class InfoHeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
-  public resetSelectedBook(): void {
-    console.log("test");
-    this.sharedDataService.selectedBook = null;
-  }
 }

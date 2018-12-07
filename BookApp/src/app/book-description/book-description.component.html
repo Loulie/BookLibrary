@@ -5,10 +5,10 @@
 </div>
 <div class="row h-75 pb-3">
     <div class="col-12 col-xl-10 test mx-auto" style="text-align: justify;">
-        <div *ngIf="!smallWindow()" class="descriptionText">
+        <div class="descriptionText" *ngIf="!mobile" >
             {{selectedBook.description}}
         </div>
-        <div *ngIf="smallWindow()" class="descriptionText">
+        <div class="descriptionText" *ngIf="mobile" >
             {{smallDescription}}
         </div>
     </div>

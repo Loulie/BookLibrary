@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { SharedDataService } from '../shared-data.service';
 import { Book } from '../Book';
 
@@ -11,6 +11,7 @@ export class BookDescriptionComponent implements OnInit {
 
   public selectedBook: Book;
   public smallDescription;
+  public mobile = false;
 
   constructor(public sharedDataService: SharedDataService) { }
 
@@ -23,11 +24,13 @@ export class BookDescriptionComponent implements OnInit {
     });
   }
 
-  public smallWindow(): boolean {
-    if (window.outerWidth < 987) {
-      return true;
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    console.log(event.target.innerWidth);
+    if (event.target.innerWidth < 987) {
+      this.mobile = true;
     } else {
-      return false;
+      this.mobile = false;
     }
   }
 }
