@@ -22,17 +22,12 @@ export class SharedDataService {
   }
 
   public createBook(book) {
-    console.log(book);
     let tmp = book;
     if (book.length !== undefined) {
        tmp = book[0];
     }
 
-    console.log(book);
     if (tmp.saleInfo.buyLink !== undefined) {
-
-      console.log(tmp.saleInfo.buyLink);
-
       return new Book(tmp.volumeInfo.title, tmp.volumeInfo.subtitle, tmp.volumeInfo.authors, tmp.volumeInfo.publisher,
         tmp.volumeInfo.publishedDate, tmp.volumeInfo.description, tmp.volumeInfo.averageRating,
          tmp.volumeInfo.imageLinks.thumbnail, tmp.saleInfo.buyLink);

@@ -54,7 +54,8 @@ p:hover:after {
 }
 
 .paddingSubmit {
-    padding-left: 9%;
+    padding-left: 8%;
+    padding-right: 11.5%;
 }
 
 .fadeIn {
