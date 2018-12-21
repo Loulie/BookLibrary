@@ -28,6 +28,7 @@ export class SharedDataService {
        tmp = book[0];
     }
 
+    console.log(book);
     if (tmp.saleInfo.buyLink !== undefined) {
 
       console.log(tmp.saleInfo.buyLink);

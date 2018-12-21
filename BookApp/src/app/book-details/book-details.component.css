@@ -21,6 +21,18 @@ img {
     margin-bottom: 10%;
 }
 
+.rating {
+    position: absolute;
+    top:10%;
+    background: #1DA1FF;
+    color:white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 15%;
+    text-align: center;
+    font-family: "Roboto";
+}
+
 .buttons {
     font-family: "Roboto";
     height: auto;
