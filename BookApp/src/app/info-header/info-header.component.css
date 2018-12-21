@@ -34,6 +34,7 @@ p:hover:after {
     top: 110%;
     height: 100%;
     right: 1.5%;
+    z-index: 2;
 }
 
 .inputLogin {
@@ -42,6 +43,18 @@ p:hover:after {
     border: 1px solid black;
     border-radius: 5px;
     color: black;
+    width: 90%;
+}
+
+.buttons {
+    background: white;
+    color:black;
+    font-family: "Roboto";
+    border: 1px solid black;
+}
+
+.paddingSubmit {
+    padding-left: 9%;
 }
 
 .fadeIn {
