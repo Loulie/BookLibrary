@@ -3,7 +3,7 @@
         <div class="col-12 col-xl-4 my-auto">
             <img src="{{this.image}}" alt="" width="50%" height="50%" id="thumbnail" />
             <div class="rating pl-1 pr-1" *ngIf="selectedBook.averageRating !== undefined" >
-              {{selectedBook.averageRating}}.0 <i class="fas fa-star star-color" style="color:#f2b01e;" ></i>
+              {{selectedBook.averageRating.toPrecision(2)}} <i class="fas fa-star star-color" style="color:#f2b01e;" ></i>
             </div>
         </div>
         <div class="col-12 col-xl-8 my-auto">

@@ -11,6 +11,7 @@ export class BookDetailsComponent implements OnInit {
 
   public selectedBook: Book;
   public image = null;
+  public rating;
 
   constructor(public sharedDataService: SharedDataService) { }
 
