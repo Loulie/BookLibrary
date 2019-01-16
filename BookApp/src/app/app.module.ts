@@ -21,6 +21,7 @@ import { NavComponent } from './nav/nav.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookDescriptionComponent } from './book-description/book-description.component';
 import { BookReviewComponent } from './book-review/book-review.component';
+import { UserInterfaceComponent } from './user-interface/user-interface.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BookReviewComponent } from './book-review/book-review.component';
     NavComponent,
     BookDetailsComponent,
     BookDescriptionComponent,
-    BookReviewComponent
+    BookReviewComponent,
+    UserInterfaceComponent
   ],
   imports: [
     BrowserModule,

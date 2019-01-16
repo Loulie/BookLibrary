@@ -10,33 +10,15 @@ import { Book } from '../Book';
 export class BookDescriptionComponent implements OnInit {
 
   public selectedBook: Book;
-  public smallDescription;
-  public mobile = false;
 
   constructor(public sharedDataService: SharedDataService) { }
 
   ngOnInit() {
 
-    if (window.innerWidth < 987) {
-      this.mobile = true;
-    }
-
     this.sharedDataService.selectedBook$.subscribe( item => {
       if (item !== null) {
         this.selectedBook = item;
-        if (this.selectedBook.description !== undefined) {
-          this.smallDescription = this.selectedBook.description.substr(0, 250) + ' ...';
-        }
       }
     });
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (event.target.innerWidth < 987) {
-      this.mobile = true;
-    } else {
-      this.mobile = false;
-    }
   }
 }

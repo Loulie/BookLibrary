@@ -9,10 +9,15 @@ import { SharedDataService } from './shared-data.service';
 export class AppComponent {
 
   selectedBook = null;
+  loggedIn = false;
 
   constructor(public sharedDataService: SharedDataService) {
     this.sharedDataService.selectedBook$.subscribe( item => {
       this.selectedBook = item;
+    });
+
+    this.sharedDataService.loggedIn$.subscribe( state => {
+      this.loggedIn = state;
     });
   }
 

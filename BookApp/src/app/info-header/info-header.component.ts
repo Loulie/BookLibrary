@@ -25,4 +25,8 @@ export class InfoHeaderComponent implements OnInit {
     }
     this.login = !this.login;
   }
+
+  public guestLogin() {
+    this.sharedDataService.loggedIn = true;
+  }
 }

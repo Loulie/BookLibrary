@@ -9,6 +9,10 @@
     <app-book-info></app-book-info>
   </div>
 
+  <div *ngIf="loggedIn === true">
+    <app-user-interface></app-user-interface>
+  </div>
+
   <div class="container-fluid" id="footer">
     <app-footer></app-footer>
   </div>

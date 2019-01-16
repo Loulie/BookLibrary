@@ -10,7 +10,14 @@ export class SharedDataService {
   private _selectedBook = new BehaviorSubject <Book> (null);
   public selectedBook$ = this._selectedBook.asObservable();
 
+  private _loggedIn = new BehaviorSubject <boolean> (false);
+  public loggedIn$ = this._loggedIn.asObservable();
+
   constructor() { }
+
+  set loggedIn (bool: boolean) {
+    this._loggedIn.next(bool);
+  }
 
   set selectedBook(book: Object) {
     const newBook = this.createBook(book);
